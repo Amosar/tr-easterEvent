@@ -1,0 +1,11 @@
+name: easter
+version: 1.4
+description: Plugin pour paque
+author: Amosar
+
+main: com.trafalcraft.easter.Main
+
+commands:
+   easter:
+     description: Base command for the easter plugin.
+     aliases: [eggs]
