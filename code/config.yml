@@ -1,0 +1,65 @@
+Settings:
+  RabbitSpawnInChunkLuck: 40
+  RabbitSpawnLuck: 70
+  MonsterSpawnLuck: 1
+  IgnoreWorlds: freebuild/mini-games
+  IgnoreRegions: spawn
+Msg:
+  prefix: "§f[§5Easter§f]>§5 "
+  no_permission: "&4ERROR &9&l> &r&bYou don''t have permission to do that!"
+  command_use: "§9[§4tr-Easter§9]> §r§cCommand use: §6$command"
+  rabbitName: "&5Easter rabbit"
+
+version: 0.1
+items:
+  elytra:
+    item:
+    displayName: "&5Easter elytra"
+    broadcastMsg: "An Elytra have been found by $player until the easter event. WP"
+    percent: 1
+  20lvls:
+    lvls: 20
+    playerMsg: "This egg contain 20lvls"
+    percent: 20
+  diamondBlock:
+    item:
+    playerMsg: "This egg contain a diamond block"
+    percent: 10
+  700coins:
+    money: 700
+    playerMsg: "This egg contain 700 coins :O"
+    percent: 15
+  easterEgg:
+    item:
+    displayName: "&5Good easter"
+    playerMsg: "This egg contain a beautiful easter egg."
+    percent: 20
+  dragonHead:
+    item:
+    playerMsg: "This egg contain a beautiful dragon head"
+    percent: 5
+  enchantedBook:
+    item:
+    displayName: "&5EnchantedBook"
+    playerMsg: "This egg contain an enchanted book"
+    percent: 5
+  villagerEgg:
+    item:
+    displayName: "&5Good easter"
+    playerMsg: "This egg contain a beautiful easter egg"
+    percent: 1
+  goldenCarrot:
+    item:
+    displayName: "&5golden carrot"
+    playerMsg: "This egg contain a beautiful golden carrot"
+    percent: 5
+  carrot:
+    item:
+    displayName: "&5You have carroted"
+    playerMsg: "This egg contain a beautiful easter egg"
+    percent: 17
+  goldenApple:
+    item:
+    displayName: "&5Easter cheater"
+    playerMsg: "This egg contain a beautiful notch apple"
+    percent: 1
