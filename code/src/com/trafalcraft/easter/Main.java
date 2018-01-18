@@ -93,7 +93,7 @@ public class Main extends JavaPlugin {
                                                 if (args[0].equalsIgnoreCase("spawn")) {
                                                         Entity entity = p.getWorld()
                                                                 .spawnEntity(p.getLocation(), EntityType.RABBIT);
-                                                        entity.setCustomName("§r§r" + Msg.EASTER_RABBIT_NAME);
+                                                        entity.setCustomName("§r§r" + Msg.EASTER_BUNNY_NAME);
                                                         entity.setCustomNameVisible(true);
                                                 }
                                                 if (args[0].equalsIgnoreCase("addItem")) {
@@ -101,13 +101,20 @@ public class Main extends JavaPlugin {
                                                                 getInstance().getConfig()
                                                                         .set("items." + args[1] + ".item",
                                                                                 p.getInventory().getItemInMainHand());
-                                                                getInstance().getConfig()
-                                                                        .set("items." + args[1] + ".percent", 0);
+                                                                if (getInstance().getConfig()
+                                                                        .getInt("items." + args[1] + ".percent") == 0) {
+                                                                        getInstance().getConfig()
+                                                                                .set("items." + args[1] + ".percent",
+                                                                                        0);
+                                                                }
+                                                                p.sendMessage(Msg.PREFIX + "Item added to "
+                                                                        + args[1] + " reward");
                                                         } else {
                                                                 p.sendMessage(Msg.COMMAND_USE.toString()
                                                                         .replace("$command",
                                                                                 "/easter addItem <itemName>"));
                                                         }
+                                                        getInstance().saveConfig();
                                                 }
                                         } else {
                                                 p.sendMessage(Msg.PREFIX.toString() + Msg.NO_PERMISSIONS);

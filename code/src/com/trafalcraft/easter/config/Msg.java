@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 
 public enum Msg {
 
-        EASTER_RABBIT_NAME("§9Easter Rabbit"),
+        EASTER_BUNNY_NAME("§9Easter Bunny"),
         PREFIX("§f[§5Easter§f]>§5 "),
         NO_PERMISSIONS("§4ERROR §9§l> §r§bYou don't have permission to do that!"),
         COMMAND_USE("§9[§4tr-Easter§9]> §r§cCommand use: §6$command");
@@ -27,17 +27,17 @@ public enum Msg {
         }
 
         public static void load() {
-                EASTER_RABBIT_NAME.replaceBy(
-                        Main.getInstance().getConfig().getString("Msg.rabbitName")
+                EASTER_BUNNY_NAME.replaceBy(
+                        Main.getInstance().getConfig().getString("Msg.bunnyName")
                                 .replace("&", "§"));
                 PREFIX.replaceBy(
-                        Main.getInstance().getConfig().getString("Msg.rabbitName")
+                        Main.getInstance().getConfig().getString("Msg.prefix")
                                 .replace("&", "§"));
                 NO_PERMISSIONS.replaceBy(
-                        Main.getInstance().getConfig().getString("Msg.rabbitName")
+                        Main.getInstance().getConfig().getString("Msg.no_permission")
                                 .replace("&", "§"));
                 COMMAND_USE.replaceBy(
-                        Main.getInstance().getConfig().getString("Msg.rabbitName")
+                        Main.getInstance().getConfig().getString("Msg.command_use")
                                 .replace("&", "§"));
         }
 

@@ -15,7 +15,7 @@ public class PlayerListener implements Listener {
         @EventHandler
         public void onPlayerClickOnEasterRabbit(PlayerInteractEntityEvent e) {
                 if (e.getRightClicked().getCustomName() != null) {
-                        if (e.getRightClicked().getCustomName().startsWith("§r§r" + Msg.EASTER_RABBIT_NAME)) {
+                        if (e.getRightClicked().getCustomName().startsWith("§r§r" + Msg.EASTER_BUNNY_NAME)) {
                                 Player player = e.getPlayer();
                                 e.getRightClicked().setCustomName(null);
                                 e.getRightClicked().setCustomNameVisible(false);

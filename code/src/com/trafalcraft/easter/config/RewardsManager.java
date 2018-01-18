@@ -11,19 +11,20 @@ public class RewardsManager {
         private static String[] rewards;
 
         public static boolean load(boolean debug) {
-                rewards = new String[100];
+                rewards = new String[10000];
                 FileConfiguration config = Main.getInstance().getConfig();
                 Set<String> items = config.getConfigurationSection("items").getKeys(false);
                 int index = 0;
                 for (String item : items) {
-                        int percent = config.getInt("items." + item + ".percent");
+                        double tempPercent = config.getDouble("items." + item + ".percent");
+                        int percent = (int) (tempPercent * 100);
                         if (debug) {
                                 Main.getInstance().getLogger().info("item = " + item);
-                                Main.getInstance().getLogger().info("percent = " + percent);
-                                Main.getInstance().getLogger().info("index = " + index);
+                                Main.getInstance().getLogger().info("percent = " + tempPercent);
+                                Main.getInstance().getLogger().info("index = " + ((double) index) / 100);
                         }
                         for (int i = 0; i < percent; i++) {
-                                if (index == 100) {
+                                if (index == 10000) {
                                         return false;
                                 }
                                 rewards[index] = item;
@@ -31,14 +32,14 @@ public class RewardsManager {
                         }
                 }
                 if (debug) {
-                        Main.getInstance().getLogger().info("totalIndex = " + index);
+                        Main.getInstance().getLogger().info("totalPercent = " + ((double) index) / 100);
                 }
-                return index == 100;
+                return index == 10000;
         }
 
         public static String getRandomReward() {
                 Random rd = new Random();
-                int value = rd.nextInt(100);
+                int value = rd.nextInt(10000);
                 return rewards[value];
         }
 }

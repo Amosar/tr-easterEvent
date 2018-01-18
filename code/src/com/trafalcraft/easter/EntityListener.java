@@ -39,7 +39,7 @@ public class EntityListener implements Listener {
                                         Entity rabbit = Bukkit.getServer()
                                                 .getWorld(ent.getWorld().getName())
                                                 .spawnEntity(ent.getLocation(), EntityType.RABBIT);
-                                        rabbit.setCustomName("§r§r" + Msg.EASTER_RABBIT_NAME);
+                                        rabbit.setCustomName("§r§r" + Msg.EASTER_BUNNY_NAME);
                                         rabbit.setCustomNameVisible(true);
                                         Firework f = Bukkit.getWorld(rabbit.getWorld().getName()).spawn(
                                                 rabbit.getLocation(), Firework.class);
@@ -70,7 +70,7 @@ public class EntityListener implements Listener {
                         Random rd = new Random();
                         int random = rd.nextInt(101 - ConfigManager.RABBIT_SPAWN_LUCK.getInt());
                         if (random == 1) {
-                                e.getEntity().setCustomName("§r§r" + Msg.EASTER_RABBIT_NAME);
+                                e.getEntity().setCustomName("§r§r" + Msg.EASTER_BUNNY_NAME);
                                 e.getEntity().setCustomNameVisible(true);
                                 Firework f = Bukkit.getWorld(e.getEntity().getWorld().getName())
                                         .spawn(e.getEntity().getLocation(), Firework.class);
@@ -95,7 +95,7 @@ public class EntityListener implements Listener {
                         if (generateNbr == 1) {
                                 Entity ent = Bukkit.getServer().getWorld(e.getEntity().getWorld().getName())
                                         .spawnEntity(e.getEntity().getLocation(), EntityType.RABBIT);
-                                ent.setCustomName("§r§r" + Msg.EASTER_RABBIT_NAME);
+                                ent.setCustomName("§r§r" + Msg.EASTER_BUNNY_NAME);
                                 ent.setCustomNameVisible(true);
                                 Firework f = Bukkit.getWorld(e.getEntity().getWorld().getName())
                                         .spawn(e.getEntity().getLocation(), Firework.class);
