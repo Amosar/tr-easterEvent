@@ -42,7 +42,7 @@ public class PlayerListener implements Listener {
 
                                 String playerMsg = yc.getString("items." + reward + ".playerMsg");
                                 if (playerMsg != null) {
-                                        player.sendMessage(playerMsg);
+                                        player.sendMessage(Msg.PREFIX + playerMsg);
                                 }
 
                                 int money = yc.getInt("items." + reward + ".money");
