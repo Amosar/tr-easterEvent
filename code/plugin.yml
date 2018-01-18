@@ -1,0 +1,16 @@
+name: tr-EasterEvent
+version: 0.1
+description: Easter event
+author: Amosar
+softdepend: [Vault,WorldGuard]
+
+main: com.trafalcraft.easter.Main
+
+commands:
+   easter:
+     description: Base command for the easter plugin.
+     permission: easter.admin
+     permission-message: '§4ERROR §9§l> §r§bYou don''t have permission to do that!'
+
+permissions:
+  seller.admin: {default: op}

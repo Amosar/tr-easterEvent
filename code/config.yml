@@ -1,0 +1,99 @@
+Settings:
+  RabbitSpawnInChunkLuck: 40
+  RabbitSpawnLuck: 70
+  MonsterSpawnLuck: 1
+  IgnoreWorlds: freebuild/mini-games
+  IgnoreRegions: spawn
+Msg:
+  prefix: '§f[§5Easter§f]>§5 '
+  no_permission: '&4ERROR &9&l> &r&bYou don''''t have permission to do that!'
+  command_use: '§9[§4tr-Easter§9]> §r§cCommand use: §6$command'
+  bunnyName: '&5Easter bunny'
+version: 0.1
+items:
+  elytra:
+    displayName: '&5Easter elytra'
+    broadcastMsg: An Elytra have been found by $player until the easter event. WP
+    percent: 0.1
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: ELYTRA
+  20lvls:
+    levels: 20
+    playerMsg: This egg contain 20lvls
+    percent: 20
+  diamondBlock:
+    playerMsg: This egg contain a diamond block
+    percent: 10
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: DIAMOND_BLOCK
+  700coins:
+    money: 700
+    playerMsg: This egg contain 700 coins :O
+    percent: 15
+  easterEgg:
+    displayName: '&5Good easter'
+    playerMsg: This egg contain a beautiful easter egg.
+    percent: 20
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: MONSTER_EGG
+      meta:
+        ==: ItemMeta
+        meta-type: SPAWN_EGG
+        internal: H4sIAAAAAAAAAONiYOBi4HTNK8ksqQxJTOdgYMpMYRDIzcxLTS5KTCuxKkpMSsosYWAAAEbg1TAoAAAA
+        id: rabbit
+  dragonHead:
+    playerMsg: This egg contain a beautiful dragon head
+    percent: 5
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: SKULL_ITEM
+      damage: 5
+  enchantedBook:
+    displayName: '&5EnchantedBook'
+    playerMsg: This egg contain an enchanted book
+    percent: 5
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        stored-enchants:
+          MENDING: 1
+  villagerEgg:
+    displayName: '&5Good easter'
+    playerMsg: This egg contain a beautiful easter egg
+    percent: 2.4
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: MONSTER_EGG
+      meta:
+        ==: ItemMeta
+        meta-type: SPAWN_EGG
+        internal: H4sIAAAAAAAAAONiYOBi4HTNK8ksqQxJTOdgYMpMYRDKzcxLTS5KTCuxKsvMyUlMTy1iYAAAkZYsxCoAAAA=
+        id: villager
+  goldenCarrot:
+    displayName: '&5golden carrot'
+    playerMsg: This egg contain a beautiful golden carrot
+    percent: 5
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_CARROT
+  carrot:
+    displayName: '&5You have carroted'
+    playerMsg: This egg contain a beautiful easter egg
+    percent: 17
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: CARROT_ITEM
+  goldenApple:
+    displayName: '&5Easter cheater'
+    playerMsg: This egg contain a beautiful notch apple
+    percent: 0.5
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: GOLDEN_APPLE
+      damage: 1
