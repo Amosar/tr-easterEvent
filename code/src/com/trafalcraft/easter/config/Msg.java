@@ -21,7 +21,7 @@ public enum Msg {
                 p.sendMessage("§3§l-------------------Easter-------------------");
                 p.sendMessage("§3/easter spawn §b- Spawn a new Easter rabbit at your position.");
                 p.sendMessage("§3/easter addItem <itemName> - Add the item in your hand to the config file.");
-                p.sendMessage("§3/seller reload - to reload the config file");
+                p.sendMessage("§3/easter reload - to reload the config file");
                 p.sendMessage("§3------------------------------------------------");
                 p.sendMessage("");
         }
