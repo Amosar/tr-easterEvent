@@ -1,5 +1,5 @@
 name: tr-EasterEvent
-version: 0.1
+version: 0.1.2
 description: Easter event
 author: Amosar
 softdepend: [Vault,WorldGuard]
