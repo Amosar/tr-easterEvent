@@ -45,10 +45,13 @@ public class PlayerListener implements Listener {
                                         player.sendMessage(Msg.PREFIX + playerMsg);
                                 }
 
-                                int money = yc.getInt("items." + reward + ".money");
-                                if (money != 0) {
-                                        Main.getEcon()
-                                                .depositPlayer(Bukkit.getOfflinePlayer(player.getUniqueId()), money);
+                                if (Main.getEcon() != null) {
+                                        int money = yc.getInt("items." + reward + ".money");
+                                        if (money != 0) {
+                                                Main.getEcon()
+                                                        .depositPlayer(Bukkit.getOfflinePlayer(player.getUniqueId()),
+                                                                money);
+                                        }
                                 }
 
                         }
