@@ -45,8 +45,7 @@ public class Main extends JavaPlugin {
                 Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
                 Bukkit.getPluginManager().registerEvents(new EntityListener(), this);
 
-                instance.getConfig().options().copyDefaults(true);
-                instance.saveConfig();
+                instance.saveDefaultConfig();
                 instance.reloadConfig();
 
                 try {
@@ -60,13 +59,13 @@ public class Main extends JavaPlugin {
                                 return;
                         }
                 } catch (YAMLException e) {
-                        this.getLogger().warning("An error as occurred in the config.yml please fix it!");
+                        this.getLogger().severe("An error as occurred in the config.yml please fix it!");
                         e.printStackTrace();
                 }
 
                 if (economy) {
                         if (!setupEconomy()) {
-                                getLogger().severe(String
+                                Bukkit.getLogger().warning(String
                                         .format("[%s] - No Economy (Vault) dependency found! Disabling Economy."
                                                 , getDescription().getName()));
                                 economy = false;
@@ -98,9 +97,20 @@ public class Main extends JavaPlugin {
                                                 }
                                                 if (args[0].equalsIgnoreCase("addItem")) {
                                                         if (args.length > 1) {
-                                                                getInstance().getConfig()
-                                                                        .set("items." + args[1] + ".item",
-                                                                                p.getInventory().getItemInMainHand());
+                                                                try {
+                                                                        p.getInventory().getClass()
+                                                                                .getMethod("getItemInMainHand");
+                                                                        getInstance().getConfig()
+                                                                                .set("items." + args[1] + ".item",
+                                                                                        p.getInventory()
+                                                                                                .getItemInMainHand());
+                                                                } catch (NoSuchMethodException e) {
+                                                                        //noinspection deprecation
+                                                                        getInstance().getConfig()
+                                                                                .set("items." + args[1] + ".item",
+                                                                                        p.getInventory()
+                                                                                                .getItemInHand());
+                                                                }
                                                                 if (getInstance().getConfig()
                                                                         .getInt("items." + args[1] + ".percent") == 0) {
                                                                         getInstance().getConfig()
